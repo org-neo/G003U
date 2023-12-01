@@ -1,0 +1,852 @@
+{
+	"folders": [
+		{
+			"name": "G003U",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/Epic Games/UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "G003U Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Debug",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Debug",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003U Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Debug",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"DebugGame",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"DebugGame",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003U Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"DebugGame",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Development",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Development",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003U Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Development",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Test",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Test",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003U Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Test",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Shipping",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Shipping",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003U Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"Mac",
+					"Shipping",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Debug",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Debug",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003U IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Debug",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"DebugGame",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"DebugGame",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003U IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"DebugGame",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Development",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Development",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003U IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Development",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Test",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Test",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003U IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Test",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Shipping",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Shipping",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003U IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003U IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003U",
+					"IOS",
+					"Shipping",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003UEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003UEditor",
+					"Mac",
+					"Debug",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003UEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003UEditor",
+					"Mac",
+					"Debug",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003UEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003UEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003UEditor",
+					"Mac",
+					"Debug",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003UEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003UEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003UEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003UEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003UEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003UEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003UEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003UEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003UEditor",
+					"Mac",
+					"Development",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003UEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003UEditor",
+					"Mac",
+					"Development",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"G003UEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "G003UEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"G003UEditor",
+					"Mac",
+					"Development",
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch G003U (Debug)",
+				"request": "launch",
+				"program": "/Users/sdlc/Documents/Unreal Projects/G003U/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "G003U Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch G003U (DebugGame)",
+				"request": "launch",
+				"program": "/Users/sdlc/Documents/Unreal Projects/G003U/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "G003U Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch G003U (Development)",
+				"request": "launch",
+				"program": "/Users/sdlc/Documents/Unreal Projects/G003U/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "G003U Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch G003U (Test)",
+				"request": "launch",
+				"program": "/Users/sdlc/Documents/Unreal Projects/G003U/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "G003U Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch G003U (Shipping)",
+				"request": "launch",
+				"program": "/Users/sdlc/Documents/Unreal Projects/G003U/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "G003U Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch G003UEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "G003UEditor Mac Debug Build",
+				"args": [
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch G003UEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "G003UEditor Mac DebugGame Build",
+				"args": [
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch G003UEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "G003UEditor Mac Development Build",
+				"args": [
+					"/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/sdlc/Documents/Unreal Projects/G003U/G003U.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/Epic Games/UE_5.3"
+			}
+		]
+	}
+}
